@@ -38,27 +38,28 @@ const styles = StyleSheet.create({
   mainContainer: {
     backgroundColor: 'cornflowerblue',
     flex: 1,
-    flexDirection: 'row'
+    flexDirection: 'row',
+    justifyContent: 'space-evenly'
   },
   caja1: {
     backgroundColor: 'navy',
-    padding: 20
+    padding: 10
   },
   caja2: {
     backgroundColor: 'red',
-    padding: 20
+    padding: 10
   },
   caja3: {
     backgroundColor: 'yellow',
-    padding: 20
+    padding: 10
   },
   caja4: {
     backgroundColor: 'blue',
-    padding: 20
+    padding: 10
   },
   textoTitulo: {
     textAlign: 'center',
-    fontSize: 20,
+    fontSize: 10,
     fontWeight: 'bold'
   }
 })
