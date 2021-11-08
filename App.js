@@ -1,16 +1,152 @@
 import React from 'react';
-import { View, Text, SafeAreaView, StyleSheet } from 'react-native';
+import { View, Text, SafeAreaView, StyleSheet, Image, ScrollView } from 'react-native';
 
 const App = () => {
   return (  
     <>
       <SafeAreaView style={styles.mainContainer}>
+        <ScrollView>
+          <View style={{ flexDirection: 'row'}}>
+            <Image
+              style={ styles.banner }
+              source={ require('./components/assets/img/bg.jpg')}
+            />
+          </View>
 
-        {/*<View style={styles.contenedorTitulo}>
-          <Text style={styles.textoTitulo}>Los Layouts en React Native </Text>
-        </View> */}
+          <View style={styles.contenedor}>
+            <Text style={styles.titulo}>Que hacer en Paris</Text>
 
-        <View style={styles.caja1}>
+            <ScrollView horizontal={true}>
+              <View style={styles.contenedorActividad}>
+                <Image
+                  style={ styles.imagenActividad }
+                  source={ require('./components/assets/img/actividad1.jpg')}
+                />
+              </View>
+              <View style={styles.contenedorActividad}>
+                <Image
+                  style={ styles.imagenActividad }
+                  source={ require('./components/assets/img/actividad2.jpg')}
+                />
+              </View>
+              <View style={styles.contenedorActividad}>
+                <Image
+                  style={ styles.imagenActividad }
+                  source={ require('./components/assets/img/actividad3.jpg')}
+                />
+              </View>
+              <View style={styles.contenedorActividad}>
+                <Image
+                  style={ styles.imagenActividad }
+                  source={ require('./components/assets/img/actividad4.jpg')}
+                />
+              </View>
+              <View style={styles.contenedorActividad}>
+                <Image
+                  style={ styles.imagenActividad }
+                  source={ require('./components/assets/img/actividad5.jpg')}
+                />
+              </View>
+            </ScrollView>
+
+            <Text style={styles.titulo}>Los mejores Alojamientos</Text>
+
+            <View>
+              <View style={styles.alojamientos}>
+                  <Image
+                    style={ styles.mejores }
+                    source={ require('./components/assets/img/mejores1.jpg')}
+                  />
+              </View>
+
+              <View style={styles.alojamientos}>
+                  <Image
+                    style={ styles.mejores }
+                    source={ require('./components/assets/img/mejores2.jpg')}
+                  />
+              </View>
+
+              <View style={styles.alojamientos}>
+                  <Image
+                    style={ styles.mejores }
+                    source={ require('./components/assets/img/mejores3.jpg')}
+                  />
+              </View>
+            </View>
+
+            <View>
+
+            <Text style={styles.titulo}>Los mejores Alojamientos</Text>
+              <ScrollView horizontal={true}>
+
+                  <View style={styles.alojamientos}>
+                    <Image
+                      style={ styles.imagenActividad }
+                      source={ require('./components/assets/img/hospedaje1.jpg')}
+                    />
+                  </View>
+                  <View style={styles.alojamientos}>
+                    <Image
+                      style={ styles.imagenActividad }
+                      source={ require('./components/assets/img/hospedaje2.jpg')}
+                    />
+                  </View>
+                  <View style={styles.alojamientos}>
+                    <Image
+                      style={ styles.imagenActividad }
+                      source={ require('./components/assets/img/hospedaje3.jpg')}
+                    />
+                  </View>
+                  <View style={styles.alojamientos}>
+                    <Image
+                      style={ styles.imagenActividad }
+                      source={ require('./components/assets/img/hospedaje4.jpg')}
+                    />
+                  </View>
+              </ScrollView>
+            </View>
+          </View>
+        </ScrollView>
+      </SafeAreaView>
+    </>
+  );
+}
+
+const styles = StyleSheet.create({
+  banner: {
+    height: 250,
+    flex: 1
+  },
+  titulo: {
+    fontWeight: 'bold',
+    fontSize: 20,
+    marginVertical: 20
+  },
+  contenedor:{
+    marginHorizontal: 10
+  },
+  imagenActividad:{
+    width: 300,
+    height: 230
+  },
+  contenedorActividad: {
+    paddingHorizontal: 10
+  },
+  mejores: {
+    width: '100%',
+    height: 250,
+  },
+  alojamientos: {
+    paddingVertical: 15,
+    paddingHorizontal: 5
+  },
+
+})
+
+export default App;
+
+/*
+  <View style={styles.caja1}>
           <Text>Caja 1</Text>
         </View>
 
@@ -25,43 +161,4 @@ const App = () => {
         <View style={ styles.caja4}>
           <Text>Caja 2</Text>
         </View>
-      </SafeAreaView>
-    </>
-  );
-}
-
-const styles = StyleSheet.create({
-  contenedorTitulo: {
-    height: 60,
-    marginTop: 40,
-  },
-  mainContainer: {
-    backgroundColor: 'cornflowerblue',
-    flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'space-evenly'
-  },
-  caja1: {
-    backgroundColor: 'navy',
-    padding: 10
-  },
-  caja2: {
-    backgroundColor: 'red',
-    padding: 10
-  },
-  caja3: {
-    backgroundColor: 'yellow',
-    padding: 10
-  },
-  caja4: {
-    backgroundColor: 'blue',
-    padding: 10
-  },
-  textoTitulo: {
-    textAlign: 'center',
-    fontSize: 10,
-    fontWeight: 'bold'
-  }
-})
-
-export default App;
+*/
